@@ -298,7 +298,7 @@ public class Sudoku extends LatinSquare {
 
 		for (; i < iMax; i++) {
 			for (j = (r % iSqrtSize) * iSqrtSize; j < jMax; j++){
-			//adsabcas	  bh  bh
+			//adsabcas	we  bh  bh
 				
 				
 		//reg[iCnt++] = super.getLatinSquare()[i][j];
