@@ -298,13 +298,29 @@ public class Sudoku extends LatinSquare {
 
 		for (; i < iMax; i++) {
 			for (j = (r % iSqrtSize) * iSqrtSize; j < jMax; j++){
-			//adsabcas	we  bh  bh
+			//adsabcas	we  bh abc
 				
 				
 		//reg[iCnt++] = super.getLatinSquare()[i][j];
 			}
 		}
 
+	}
+	private void ShuffuleRegion(int r) {
+		int[]reg = getRegion(r);
+		shuffuleArray(reg);
+		int i = (r / iSqrtSize) * iSqrtSize;
+		int j = (r % iSqrtSize) * iSqrtSize;		
+		int jMax = j + iSqrtSize;
+		int iMax = i + iSqrtSize;
+		int iCnt = 0;
+		for (; i < iMax; i++) {
+			for (j = (r % iSqrtSize) * iSqrtSize; j < jMax; j++) {
+				getPuzzle()[i][j] = reg[iCnt];
+				iCnt++;	
+			}
+		}
+		
 	}
 	
 	private void shuffleArray(int[] ar) {
